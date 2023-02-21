@@ -1,6 +1,6 @@
 package models;
 
-public class Zlomek {
+public class Zlomek implements OneNumber{
 
     private int citatel;
     private int jmenovatel;
@@ -18,7 +18,10 @@ public class Zlomek {
         return jmenovatel;
     }
 
-
+public int NejvetsiSpolecnyDelitel (int a, int b){
+    if(b==0) return a;
+    return NejvetsiSpolecnyDelitel(b,a%b);
+}
 
 
     @Override
@@ -28,6 +31,24 @@ public class Zlomek {
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        Zlomek zlomek1=(Zlomek)obj;
+       /* if(zlomek1.jmenovatel == this.jmenovatel && zlomek1.citatel == this.citatel){
+            return true;
+        }
+        return false;*/
+
+        if(this.citatel != zlomek1.getCitatel()){
+            return false;
+        }
+        if(this.jmenovatel != zlomek1.getJmenovatel()){
+            return false;
+        }
+        return true;
+    }
+
+
+    @Override
+    public double getOneNumber() {
+        return citatel/jmenovatel;
     }
 }

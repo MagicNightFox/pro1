@@ -44,4 +44,11 @@ public class Calculator {
     }
 //více metod co dělají to samé, jen v jiných proměnných - přetěžování
 
+    public double Sum(OneNumber num1, OneNumber num2){
+        double number1 = num1.getOneNumber();
+        double number2 = num2.getOneNumber();
+        System.out.println("Součet: " +number1+ " + " + number2 + " = " + (number1+number2));
+        return number1+number2;
+    }
+
 }

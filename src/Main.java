@@ -2,6 +2,7 @@ import models.Calculator;
 import models.Number;
 import models.Zlomek;
 
+
 public class Main {
     public static void main(String[] args) {
         int num1 = 15;
@@ -54,8 +55,19 @@ public class Main {
         Zlomek zlomek1 = new Zlomek(15,3);
         Zlomek zlomek2 = new Zlomek(69,420);
 
+
         System.out.println(zlomek1); // == System.out.println(zlomek1.tostring())
 
+        Zlomek zlomek3 = new Zlomek (15,3);
+        if(zlomek1!=zlomek3){
+            System.out.println("zlomek1 se nerovná zlomku3");
+        }
+
+        if (zlomek1.equals(zlomek3)){
+            System.out.println("zlomek1 equals zlomek3");
+        }
+
+    Number.vypisPocetHvezdicek(5);
 
     }
 }

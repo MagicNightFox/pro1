@@ -20,4 +20,15 @@ public class Number {
         return createdAt;
     }
 
+    public static void vypisPocetHvezdicek(int x){
+        if (x==0) return;
+        String hvezdicky ="";
+        for (int i = 0;i<x;i++){
+            hvezdicky +="*";
+        }
+        System.out.println(hvezdicky);
+        vypisPocetHvezdicek(x-1);
+
+    }
+
 }
