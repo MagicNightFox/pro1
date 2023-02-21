@@ -1,4 +1,6 @@
 import models.Calculator;
+import models.Number;
+import models.Zlomek;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,5 +41,21 @@ public class Main {
 
         calc2.Sum(111,15);
         System.out.println(calc4);
+
+
+
+        Number number1 = new Number(15);
+        Number number2 = new Number(23.6);
+
+        double summary = number1.getNum() + number2.getNum();
+        double summary2 = calc.Sum(number1.getNum(),number2.getNum());
+        double summary3 = calc.Sum(number1,number2);
+
+        Zlomek zlomek1 = new Zlomek(15,3);
+        Zlomek zlomek2 = new Zlomek(69,420);
+
+        System.out.println(zlomek1); // == System.out.println(zlomek1.tostring())
+
+
     }
 }
